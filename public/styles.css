@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000; /* Black background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #00ff00; /* Green text color */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ff00; /* Green text color */
+}
+
+.hex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 420px; /* Adjust based on hex size and number of columns */
+    margin: 0 auto;
+}
+
+.hex {
+    position: relative;
+    width: 60px; /* Adjust to change hex size */
+    height: 69.28px; /* width * sqrt(3) / 2 */
+    margin: 3px 0;
+}
+
+.hex:nth-child(6n+1) {
+    margin-left: 30px;
+}
+
+.hex-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+        25% 6.7%, 75% 6.7%,
+        100% 50%, 75% 93.3%,
+        25% 93.3%, 0% 50%
+    );
+    background-color: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #00ff00; /* Green border */
+    color: #00ff00; /* Green text color */
+}
+
+.hex-cell {
+    font-size: 20px;
+    text-align: center;
+    line-height: 69.28px; /* Adjust to match hex height */
+    cursor: pointer; /* Add cursor pointer to indicate clickable cells */
+}
+
+#validateButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ff00; /* Green background */
+    color: #000; /* Black text color */
+    border: none;
+    cursor: pointer;
+}
+
+#validateButton:hover {
+    background-color: #008000; /* Darker green on hover */
+}
+
+#messageBox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #000; /* Black background */
+    border: 2px solid #00ff00; /* Green border */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green shadow */
+    z-index: 1000;
+    text-align: center;
+    color: #00ff00; /* Green text color */
+}

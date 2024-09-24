@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance_n_Roots</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #validateButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #messageBox {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Balance_n_Roots</h1>
+    <div class="hex-grid">
+        <!-- Hex grid with cells -->
+        <!-- First row -->
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">3</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">9</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">5</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">2</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">5</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">2</div></div></div>
+        <!-- Second Row -->
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">5</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">4</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">6</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">2</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">6</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">0</div></div></div>
+        <!-- Third row -->
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">4</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">6</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">8</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">1</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell clickable" data-cell="1">?</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">4</div></div></div>        
+        <!-- Fourth row -->
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">9</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">4</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">1</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">6</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell clickable" data-cell="2">?</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">9</div></div></div>
+        <!-- Fifth row -->
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">4</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">1</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">8</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">1</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">3</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">7</div></div></div>
+        <!-- Sixth row -->
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">5</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">2</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">4</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">0</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">8</div></div></div>
+        <div class="hex"><div class="hex-inner"><div class="hex-cell">0</div></div></div>
+    </div>
+    <button id="validateButton">Validate</button>
+    <div id="messageBox"></div>
+    <script src="script.js"></script>
+</body>
+</html>
